@@ -13,7 +13,7 @@ void onSuccess(){
 //ESP failed to connect to the router
 void onFailure(){
   Serial.println("Starting access point");
-  wifi.startAccessPoint();
+  wifi.startAccessPoint(); //default accessPoint credentials WifiConfig/123456789
   server.on("/", loginUI);
   server.on("/config", configHandler);
   server.begin();

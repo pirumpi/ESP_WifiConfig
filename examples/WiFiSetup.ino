@@ -48,7 +48,7 @@ void configHandler(){
 
 //Create WIFI login UI
 void loginUI() {
-  char page[] = "<html>"
+  char container[] = "<html>"
                   "<head>"
                     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
                     "<title>Basic WiFi Setup</title>"
@@ -71,6 +71,7 @@ void loginUI() {
                       "</script>"
                   "</body>"
                 "</html>";
+    String page = container;
     page.replace("%LIST%", wifi.nearAccessPoints());
     server.send(200, "text/html", page);
 }
